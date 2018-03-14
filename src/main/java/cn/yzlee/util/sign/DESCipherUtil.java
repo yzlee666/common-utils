@@ -89,7 +89,6 @@ public class DESCipherUtil
     private final static Logger logger = LoggerFactory.getLogger(DESCipherUtil.class);
 
     public static void main(String[] args) throws Exception{
-
         final String key = "zjy01gci";
         String msg = "hello world. ";
         System.out.println("加密前："+msg);
