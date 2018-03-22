@@ -28,6 +28,8 @@
     <junit.version>3.8.1</junit.version>
     <servlet.version>3.1.0</servlet.version>
     <google.zxing.version>3.2.1</google.zxing.version>
+    <hibernate.version>5.2.10.Final</hibernate.version>
+    <hibernate-validator.version>5.4.0.Final</hibernate-validator.version>
   </properties>
 
   <dependencies>
@@ -59,5 +61,27 @@
           <artifactId>javax.servlet-api</artifactId>
           <version>${servlet.version}</version>
       </dependency>
+
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-core</artifactId>
+      <version>${hibernate.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-validator</artifactId>
+      <version>${hibernate-validator.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-ehcache</artifactId>
+      <version>${hibernate.version}</version>
+      <exclusions>
+        <exclusion>
+          <groupId>net.sf.ehcache</groupId>
+          <artifactId>ehcache</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
   </dependencies>
 </project>
